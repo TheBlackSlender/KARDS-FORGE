@@ -8,8 +8,83 @@
 <body>
   <h1>KARDS Fanmade Card Creator</h1>
   <div id="card-form">
-    <!-- Form content will go here -->
-  </div>
+  <form id="cardCreatorForm">
+    <label>
+      Card Name:
+      <input type="text" name="cardName" required>
+    </label><br><br>
+    <label>
+      Card Cost:
+      <input type="number" name="cardCost" min="0" required>
+    </label><br><br>
+    <label>
+      Card Type:
+      <select name="cardType" required>
+        <option value="">--Choose--</option>
+        <option value="Infantry">Short Range Unit - Infantry</option>
+        <option value="Tank">Short Range Unit - Tank</option>
+        <option value="Artillery">Long Range Unit - Artillery</option>
+        <option value="Fighter">Long Range Unit - Fighter</option>
+        <option value="Bomber">Long Range Unit - Bomber</option>
+        <option value="Order">Non-Combat Card - Order</option>
+        <option value="Countermeasure">Non-Combat Card - Countermeasure</option>
+      </select>
+    </label><br><br>
+    <label>
+      Card Rarity:
+      <select name="cardRarity" required>
+        <option value="">--Choose--</option>
+        <option>No Rarity</option>
+        <option>Standard</option>
+        <option>Limited</option>
+        <option>Special</option>
+        <option>Elite</option>
+      </select>
+    </label><br><br>
+    <label>
+      Nation:
+      <select name="nation" required>
+        <option value="">--Choose--</option>
+        <option>Soviet Union</option>
+        <option>United States</option>
+        <option>Japan</option>
+        <option>Germany</option>
+        <option>Britain</option>
+        <option>France</option>
+        <option>Italy</option>
+        <option>Poland</option>
+        <option>Finland</option>
+      </select>
+    </label><br><br>
+    <!-- Unit-specific fields -->
+    <div id="unitFields" style="display:none;">
+      <label>
+        Operation Cost:
+        <input type="number" name="operationCost" min="0">
+      </label><br><br>
+      <label>
+        Attack:
+        <input type="number" name="attack" min="0">
+      </label><br><br>
+      <label>
+        Defense:
+        <input type="number" name="defense" min="0">
+      </label><br><br>
+      <label>
+        Keywords and Abilities:
+        <input type="text" name="keywords">
+      </label><br><br>
+    </div>
+    <!-- Non-Combat fields -->
+    <div id="nonCombatFields" style="display:none;">
+      <label>
+        Effect:
+        <input type="text" name="effect">
+      </label><br><br>
+    </div>
+    <button type="submit">Create Card</button>
+  </form>
+</div>
   <script src="script.js"></script>
 </body>
 </html>
